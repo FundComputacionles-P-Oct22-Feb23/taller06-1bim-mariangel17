@@ -1,0 +1,53 @@
+Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. Se debe imprimir el siguiente reporte (usar una cadena de acumulación):
+
+Listado de Jugadores
+1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+2. Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+3. Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+4. Ángel Mena -Delantero-, edad 32, estatura 1.75
+5. Michael Estrada -Delantero-, edad 27, estatura 1.93
+Promedio de edades:  26.8
+Promedio de estaturas: 1.87
+
+
+1.Inicio
+2.contador, i[0-n] <-- 0
+3.nombre_Jugadores, x(50)[{a-z},{A-Z},{BS}]
+4.posicion_Campo, x(50)[{a-z},{A-Z},{BS}]
+5.edad, i[0-n]
+6.estatura, d[0-n]
+7.promedio_Edad, d[0-n]
+8.promedio_Estatura, d[0-n]
+9.mensaje, x(500)[{a-z},{A-Z},{BS}] <--""
+10.bandera,& <-- true
+11.opcion, x(1) [{a-z} ]
+12.Mientras bandera == true entonces
+13.     Escribe "Ingrese el nombre del jugador"
+14.    Lee nombre_Jugadores
+15.    Escribe "Ingrese la posición del jugador"
+16.    Lee posicion_Campo
+17.    Escribe "Ingrese la edad del jugador"
+18.    Lee edad
+19.    Escribe "Ingrese la estatura del jugador"
+20.    Lee estatura
+21.    promedio_Edad <-- promedio_Edad + edad
+22.    promedio_Estatura <-- promedio_Estatura + estatura
+23.    mensaje <-- mensaje + nombre_Jugadores + "\t" + posicion_Campo + "\t" + edad + "\t" + estatura + "\n"
+24.    contador <-- contador + 1
+25.    Escribe "Desea terminar el proceso.Ingrese A para salir"
+26.    Lee opcion
+27.    Si opcion == "A" entonces
+28.         bandera <-- false
+29.    FinSi 
+30.FinMientras
+31.promedio_Edad <-- promedio_Edad/ contador
+32.promedio_Estatura<--promedio_Estatura/ contador
+33.Escribe mensaje
+34.Escribe "Promedio Estatura"+promedio_Estatura+"\n"+"Promedio Edad:"+promedio_Edad
+33.Fin  

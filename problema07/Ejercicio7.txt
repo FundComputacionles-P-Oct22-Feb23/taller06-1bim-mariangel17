@@ -1,0 +1,18 @@
+Generar e imprimir la siguiente serie:
+
+-1/1+1/2-1/3+1/4-1/5+1/6-1/7+1/8-1/9+1/10
+
+
+1. Inicio
+2. contador <-- 1
+4. mensaje, x(500)[{a-z},{A-Z},{BS}] <--""
+3. Mientras contador < 11 entonces
+4.     Si contador MOD 2 = 0 entonces
+5.         mensaje <-- mensaje + "+1/" + contador
+6.     De lo contrario
+7.         mensaje <-- mensaje + "-1/" + contador
+8.     FinSi
+9.     contador <-- contador + 1
+10. FinMientras
+11. Escribe mensaje
+12. Fin
